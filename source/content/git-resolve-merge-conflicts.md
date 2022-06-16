@@ -22,7 +22,20 @@ If you receive the error that you have conflicts while updating core, the fastes
 This is safe to run if you don't have your own changes in any of the conflicting files (for example problems with `.gitignore`).
 
 <TabList>
-
+  
+<Tab title="Drupal 8+" id="d8" active={true}>
+  
+  If you're unable to update using Auto-update in the Pantheon Dev environment UI,
+  run this locally in a Pantheon LocalDev CLI shell to force a Core update
+  
+  ```bash{promptUser: user}
+  # Pull the latest Pantheon Drupal upstream changes
+  git pull -Xtheirs https://github.com/pantheon-systems/drupal-recommended
+  # Resolve any conflicts - you can do this in any editor outside of LocalDev if you want
+  git push origin master
+  ```
+</Tab>
+  
 <Tab title="Drupal 7" id="d7" active={true}>
 
   ```bash{promptUser: user}
